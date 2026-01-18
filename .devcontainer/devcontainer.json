@@ -1,0 +1,27 @@
+{
+    "name": "Flutter RDP & Android Studio",
+    "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+    "features": {
+        "ghcr.io/devcontainers/features/sshd:1": {},
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+        "ghcr.io/nandroid/devcontainers-features/flutter:1": {
+            "version": "latest"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "Dart-Code.flutter",
+                "Dart-Code.dart-code",
+                "nash.awesome-flutter-snippets",
+                "alexisvt.flutter-snippets"
+            ]
+        }
+    },
+    "forwardPorts": [
+        3389,
+        6080
+    ],
+    "postCreateCommand": "bash .devcontainer/setup.sh",
+    "remoteUser": "codespace"
+}
